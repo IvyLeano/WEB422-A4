@@ -1,3 +1,4 @@
+
 /*
  * Base structure
  */
@@ -23,6 +24,10 @@ body {
  */
 .navbar-fixed-top {
   border: 0;
+  /* background-color: ; */
+color: white;
+font-size: 120%;
+padding-top: 10px;
 }
 
 /*
