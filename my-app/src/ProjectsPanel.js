@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import moment from 'moment'
+import Projects from './Projects';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 class ProjectsPanel extends Component {
