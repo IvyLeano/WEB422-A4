@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class TeamsPanel extends Component {
    
@@ -13,7 +13,6 @@ class TeamsPanel extends Component {
             //targetEmployee: -1,
         }
     }
-
     componentDidMount() {
         fetch(this.dataSource)
         .then(res => res.json())
@@ -25,7 +24,6 @@ class TeamsPanel extends Component {
             console.log("error");
         });
     }
-
   render() {
     return (
  <div className="panel panel-default">
@@ -38,7 +36,7 @@ class TeamsPanel extends Component {
                           <tbody>
                              {this.state.teams.map((element, index) => {
                                 return (
-                                    <tr key={element._id}>
+                                    <tr>
                                         <td>{element.TeamName}</td>
                                         <td>{element.Employees.length} Employees</td>
                                     </tr>
@@ -47,12 +45,7 @@ class TeamsPanel extends Component {
                           </tbody>
                         </table>
                       </div>
-                      <BrowserRouter>
-                      <Switch>
-                      <Route to="/teams"><button className="btn btn-primary form-control">View All Team Data</button></Route>
-                      </Switch>
-                      </BrowserRouter>
-                      
+                      <Link to="/teams"><button id="button" className="btn btn-primary form-control">View All Team Data</button></Link>
                     </div>
                   </div>
     );}}

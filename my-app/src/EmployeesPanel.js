@@ -1,12 +1,9 @@
-
 import React, { Component } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import axios from 'axios'
 
-
 class EmployeesPanel extends Component {
-    
-   constructor(props) {
+      constructor(props) {
         super(props);
         this.dataSource = this.props.dataSource;
         this.state = {
@@ -15,7 +12,6 @@ class EmployeesPanel extends Component {
             //targetEmployee: -1,
         }
     }
-
     componentDidMount() {
         fetch(this.dataSource)
         .then(res => res.json())
@@ -27,8 +23,6 @@ class EmployeesPanel extends Component {
             console.log("error");
         });
     }
-
-
 render(){
   return(
 <div className="panel panel-default">
@@ -41,22 +35,18 @@ render(){
                           <tbody>
                             {this.state.employees.map((element, index) => {
                                 return (
-                                    <tr key={element._id}>
+                                    <tr>
                                         <td>{element.FirstName} {element.LastName}</td>
                                         <td>{element.Position.PositionName}</td>
                                     </tr>
                                 )
                             })}
-                            </tbody>
+                           </tbody>
                         </table>
                       </div>
-                      <BrowserRouter>
-                      <Switch>
-                      <Route to="/employees"><button className="btn btn-primary form-control">View All Employee Data</button></Route>
-                       </Switch>
-                      </BrowserRouter>
+                      <Link to="/employees"><button id="button" className="btn btn-primary form-control">View All Employee Data</button></Link>
                     </div>
                   </div>);}}
 
-                     export default EmployeesPanel;
+                   export default EmployeesPanel;
                      

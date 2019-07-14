@@ -6,6 +6,8 @@
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
   padding-top: 50px;
+ /* body colour //////////////////////////////*/
+  /* background-color: #fbbc05; */
 }
 
 
@@ -24,10 +26,12 @@ body {
  */
 .navbar-fixed-top {
   border: 0;
-  /* background-color: ; */
+  /* background-color: ; nav//////////////////////////////////*/
+background-color:	#ea4335;
 color: white;
-font-size: 120%;
+font-size: 50px;
 padding-top: 10px;
+font-family: 'Monoton', cursive;
 }
 
 /*
@@ -50,7 +54,11 @@ padding-top: 10px;
     overflow-x: hidden;
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
     background-color: #f5f5f5;
+    /* sidebar  colour/////////////////////////////////////////////*/
     border-right: 1px solid #eee;
+    background-color: #34a853;
+    font-family: 'Bangers', cursive;
+    font-size: 20px;
   }
 }
 
@@ -63,12 +71,15 @@ padding-top: 10px;
 .nav-sidebar > li > a {
   padding-right: 20px;
   padding-left: 20px;
+  /*font colour ////////////////////////////////////////////////////////*/
+  color: #fff;
 }
 .nav-sidebar > .active > a,
 .nav-sidebar > .active > a:hover,
 .nav-sidebar > .active > a:focus {
-  color: #fff;
-  background-color: #428bca;
+  color: white;
+  /* highlight //////////////////////////////////////////*/
+  background-color: #4285f4; 
 }
 
 
@@ -98,4 +109,7 @@ padding-top: 10px;
 .main .overview-table .table{
   padding-bottom:0px;
   margin-bottom:0px;
+}
+#button {
+  background-color: #4285f4; 
 }
